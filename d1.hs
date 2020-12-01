@@ -1,13 +1,9 @@
 
 -- part 1
-answer list = x * y
-  where
-    (x,y) = head [(a, b) | a <- list, b <- list, a + b == 2020]
+answer list = head [ a * b | a <- list, b <- list, a + b == 2020]
 
 -- part 2
-answer' list = x * y * z
-  where
-    (x,y,z) = head [(a, b,c) | a <- list, b <- list, c <- list, a + b + c == 2020]
+answer' list = head [ a * b * c | a <- list, b <- list, c <- list, a + b + c == 2020]
 
 input = [
   1686,
